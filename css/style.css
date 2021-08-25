@@ -255,3 +255,9 @@
         text-transform: uppercase;
         font-size: 15px;
     }
+    /* footer*/
+    .footer{
+        background-color: #000;
+        width: 100%;
+        color: #fff;
+    }
