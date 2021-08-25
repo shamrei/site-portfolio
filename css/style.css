@@ -1,11 +1,16 @@
     @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800);
     @import url(http://fonts.googleapis.com/css?family=Lobster);
+
     * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
     }
-    
+
+    .section {
+        padding: 100px 0 150px;
+    }
+
     h1,
     h2,
     h3,
@@ -15,17 +20,19 @@
         font: 700 40px/1.2 Raleway, sans-serif;
         text-transform: uppercase;
         letter-spacing: 5px;
-        margin: 5px 0 5px;
+        padding-top: 35px;
+        margin: 5px 0 35px;
         color: #222;
+        text-align: center;
     }
-    
+
     .container {
         width: 1280px;
         margin: 0 auto;
     }
-    
+
     .header {
-        height: 970px;
+        height: 100vh;
         background-position: 50% 0px;
         background: url(../img/cover.jpg);
         background-color: #222;
@@ -38,12 +45,13 @@
         background-size: cover;
         padding: 0;
         color: #fff;
+        background-blend-mode: overlay;
     }
-    
+
     .header h1 {
         color: #fff;
     }
-    
+
     .home-overlay {
         background-color: rgba(44, 62, 80, 0.3);
         background-image: url("../img/pattern.png");
@@ -52,10 +60,9 @@
         left: 0;
         position: absolute;
         top: 0;
-        width: 100%;
         z-index: 0;
     }
-    
+
     .intro {
         position: absolute;
         width: 100%;
@@ -69,7 +76,7 @@
         transform: translate(0%, -50%);
         padding: 0 15px;
     }
-    
+
     .start {
         font-family: Raleway, "Times New Roman", Times, sans-serif;
         font-size: 16px;
@@ -77,17 +84,18 @@
         text-transform: none;
         margin: 15px 0;
     }
-    
+
     .intro h1 {
         font: 700 40px/1.2 Raleway, sans-serif;
         text-transform: uppercase;
         letter-spacing: 5px;
         margin: 5px 0 5px;
     }
+
     /* ---------------------------------------------- /*
  *Scroll Down
 /* ---------------------------------------------- */
-    
+
     .scroll-down {
         position: absolute;
         left: 50%;
@@ -101,7 +109,7 @@
         z-index: 10;
         text-align: center;
     }
-    
+
     .scroll-down span {
         position: relative;
         color: #fff;
@@ -118,15 +126,15 @@
         animation-iteration-count: infinite;
         animation-play-state: running;
     }
-    
+
     .menu-up {
         border-bottom: 1px solid #f5f5f5;
         position: relative;
-        width: 100%;
+        width: 100vw;
         z-index: 999;
         padding-top: 20px;
     }
-    
+
     .navbar-brand {
         text-decoration: none;
         color: #000;
@@ -134,7 +142,7 @@
         font-size: 22px;
         font-family: Lobster, cursive;
     }
-    
+
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -142,22 +150,22 @@
         align-items: center;
         background: #fff;
     }
-    
+
     .navbar_menu {
         display: inline;
     }
-    
+
     .navbar_menu li {
         display: inline;
         padding: 0 15px;
     }
-    
+
     .active {
         background: none;
         outline: 0;
         color: #E7746F;
     }
-    
+
     .navbar_menu li>a {
         text-decoration: none;
         font-size: 15px;
@@ -166,34 +174,84 @@
         font-family: Raleway, sans-serif;
         color: #222;
     }
+
+    .navbar-header a {
+        font-size: 30px;
+    }
+
     /* section skills*/
-    
-    .skills {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-    
-    .section_name {
-        text-align: center;
-        font: 700 40px/1.2 Raleway, sans-serif;
-        text-transform: uppercase;
-    }
-    
+
+    .skills {}
+
     .level {
         margin-top: 100px;
         display: flex;
         justify-content: space-between;
         text-align: center;
     }
-    
+
     .level_list>h5 {
         font-size: 23px;
         font: 700, Raleway, sans-serif;
     }
-    
+
     .level_list p {
         font-size: 20px;
         position: relative;
         top: -120px;
         font: 23px/1.2 Raleway, sans-serif;
+    }
+
+    /*portfolio*/
+    .porfolio {
+        background-color: gray;
+    }
+
+    .portfolio_list {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .list {
+        margin: 5px;
+        background-color: #000;
+        width: 250px;
+        height: 150px;
+    }
+
+    /*form*/
+
+    .form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 700px;
+        margin: 0 auto;
+    }
+    .form input{
+        width: 300px;
+        height: 30px;
+        margin: 5px;
+        border: 1px solid #000;
+        padding: 5px 0 0 5px;
+    }
+    .form textarea{
+        height: 150px;
+        width: 610px;
+        resize: none;
+        border: 1px solid #000;
+        padding: 5px 0 5px 5px;
+    }
+    .btn{
+        width: 150px;
+        height: 30px;
+        margin-top: 30px;
+        border: 1px solid #000;
+        background-color: #fff;
+        color: black;
+        font-family: Raleway, "Times New Roman", Times, sans-serif;
+        text-transform: uppercase;
+        font-size: 15px;
     }
