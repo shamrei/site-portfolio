@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="css/style.css" rel="stylesheet" media="screen and (min-width: 801px)">
+    <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width: 800px)">
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="container">
             <div class="home-overlay"></div>
             <div class="intro">
@@ -34,6 +35,10 @@
                         <a class="navbar-brand" href="index.html">Aliaksei Shamrei</a>
                     </div>
                     <div class="menu__navbar" id="custom-collapse">
+                        <input id="menu__toggle" type="checkbox" />
+                        <label class="menu__btn" for="menu__toggle">
+                          <span></span>
+                        </label>
                         <ul class="navbar_menu">
                             <li><a href="#home" class="active">Home</a></li>
                             <li><a href="#skills">Skills</a></li>
@@ -51,56 +56,87 @@
                     <div class="level_list">
                         <svg width="200px" height="200px" viewBox="0 0 42 42" class="donut">
                             <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
-                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
-                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35"></circle>
-                          </svg>
+                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#d2d3d4" stroke-width="3"></circle>
+                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35">
+                            </circle>
+                        </svg>
                         <p>85%</p>
                         <h5>HTML</h5>
                     </div>
                     <div class="level_list">
                         <svg width="200px" height="200px" viewBox="0 0 42 42" class="donut">
                             <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
-                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
-                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35"></circle>
-                          </svg>
+                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#d2d3d4" stroke-width="3"></circle>
+                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35">
+                            </circle>
+                        </svg>
                         <p>85%</p>
                         <h5>CSS</h5>
                     </div>
                     <div class="level_list">
                         <svg width="200px" height="200px" viewBox="0 0 42 42" class="donut">
                             <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
-                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
-                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35"></circle>
-                          </svg>
+                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#d2d3d4" stroke-width="3"></circle>
+                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35">
+                            </circle>
+                        </svg>
                         <p>85%</p>
                         <h5>JavaScript</h5>
                     </div>
                     <div class="level_list">
                         <svg width="200px" height="200px" viewBox="0 0 42 42" class="donut">
                             <circle class="donut-hole" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
-                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="3"></circle>
-                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35"></circle>
-                          </svg>
+                            <circle class="donut-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#d2d3d4" stroke-width="3"></circle>
+                            <circle class="donut-segment" cx="21" cy="21" r="15.91549430918954" fill="transparent"
+                                stroke="#ce4b99" stroke-width="3" stroke-dasharray="95 15" stroke-dashoffset="35">
+                            </circle>
+                        </svg>
                         <p>85%</p>
                         <h5>React/Redux</h5>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="porfolio section">
+        <section class="porfolio section" id="portfolio">
             <div class="container">
                 <h2>Мои Работы</h2>
                 <div class="portfolio_list">
-                    <a href="#" class="list"></a>
-                    <a href="#" class="list"></a>
-                    <a href="#" class="list"></a>
-                    <a href="#" class="list"></a>
-                    <a href="#" class="list"></a>
-                    <a href="#" class="list"></a>
+                    <div class="list">
+                        <div class="bg_list"></div>
+                        <a href="">Калькулятор</a>
+                    </div>
+                    <div class="list">
+                        <div class="bg_list"></div>
+                        <a href="">Калькулятор</a>
+                    </div>
+                    <div class="list">
+                        <div class="bg_list"></div>
+                        <a href="">Калькулятор</a>
+                    </div>
+                    <div class="list">
+                        <div class="bg_list"></div>
+                        <a href="">Калькулятор</a>
+                    </div>
+                    <div class="list">
+                        <div class="bg_list"></div>
+                        <a href="">Калькулятор</a>
+                    </div>
+                    <div class="list">
+                        <div class="bg_list"></div>
+                        <a href="">Калькулятор</a>
+                    </div>
+
                 </div>
             </div>
         </section>
-        <section class="send_form section">
+        <section class="send_form section" id="contact">
             <h2>Форма связи</h2>
             <form class="form" action="#">
                 <input type="text" placeholder="Введите имя">
