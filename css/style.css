@@ -1,18 +1,18 @@
-    @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,700,800);
     @import url(http://fonts.googleapis.com/css?family=Lobster);
-
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     * {
         box-sizing: border-box;
         padding: 0;
         margin: 0;
     }
-
+    
     .section {
         width: 100vw;
-        height: 100vh;
+        height: 100%;
+        font-family: Raleway, sans-serif;
         padding: 100px 0 100px 0;
     }
-
+    
     h1,
     h2,
     h3,
@@ -27,12 +27,12 @@
         color: #222;
         text-align: center;
     }
-
+    
     .container {
-        width: 1280px;
+        width: 80vw;
         margin: 0 auto;
     }
-
+    
     .header {
         height: 100vh;
         background-position: 50% 0px;
@@ -49,11 +49,11 @@
         color: #fff;
         background-blend-mode: overlay;
     }
-
+    
     .header h1 {
         color: #fff;
     }
-
+    
     .home-overlay {
         background-color: rgba(44, 62, 80, 0.3);
         background-image: url("../img/pattern.png");
@@ -64,7 +64,7 @@
         top: 0;
         z-index: 0;
     }
-
+    
     .intro {
         position: absolute;
         width: 100%;
@@ -78,20 +78,18 @@
         transform: translate(0%, -50%);
         padding: 0 15px;
     }
-
+    
     .start {
-        font-family: Raleway, "Times New Roman", Times, sans-serif;
-        font-size: 16px;
+        font-family: Raleway, Times, sans-serif;
+        font-size: 20px;
         font-style: normal;
         text-transform: none;
         margin: 15px 0;
     }
-
-
     /* ---------------------------------------------- /*
  *Scroll Down
 /* ---------------------------------------------- */
-
+    
     .scroll-down {
         position: absolute;
         left: 50%;
@@ -105,7 +103,7 @@
         z-index: 10;
         text-align: center;
     }
-
+    
     .scroll-down span {
         position: relative;
         color: #fff;
@@ -122,7 +120,7 @@
         animation-iteration-count: infinite;
         animation-play-state: running;
     }
-
+    
     .menu-up {
         border-bottom: 1px solid #f5f5f5;
         position: relative;
@@ -130,13 +128,15 @@
         z-index: 999;
         padding-top: 20px;
     }
-    #menu__toggle{
+    
+    #menu__toggle {
         display: none;
     }
-    .menu__btn{
+    
+    .menu__btn {
         display: none;
     }
-
+    
     .navbar-brand {
         text-decoration: none;
         color: #000;
@@ -144,7 +144,7 @@
         font-size: 22px;
         font-family: Lobster, cursive;
     }
-
+    
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -152,22 +152,22 @@
         align-items: center;
         background: #fff;
     }
-
+    
     .navbar_menu {
         display: inline;
     }
-
+    
     .navbar_menu li {
         display: inline;
         padding: 0 15px;
     }
-
+    
     .active {
         background: none;
         outline: 0;
         color: #E7746F;
     }
-
+    
     .navbar_menu li>a {
         text-decoration: none;
         font-size: 15px;
@@ -176,64 +176,97 @@
         font-family: Raleway, sans-serif;
         color: #222;
     }
-
+    
     .navbar-header a {
         font-size: 30px;
     }
-
     /* section skills*/
-
+    
     .skills {}
-
+    
     .level {
         margin-top: 100px;
         display: flex;
         justify-content: space-between;
         text-align: center;
     }
-
+    
     .level_list>h5 {
         font-size: 23px;
         font: 700, Raleway, sans-serif;
     }
-
+    
     .level_list p {
         font-size: 20px;
         position: relative;
         top: -120px;
         font: 23px/1.2 Raleway, sans-serif;
     }
-
     /*portfolio*/
-    .porfolio {
-        background-color: #d4e0ce;
+    
+    .portfolio {
+        background-color: gray;
     }
-
-    .portfolio_list {
-        margin-top: 100px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+    
+    #slides {
+        position: relative;
+        height: 300px;
+        padding: 0px;
+        margin: 0 auto;
+        list-style-type: none;
+        width: 70%;
     }
-
-    .list {
-        margin: 5px;
-        width: 250px;
-        height: 150px;
+    
+    .slide {
+        text-align: center;
+        margin: 0 auto;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        -webkit-transition: opacity 1s;
+        -moz-transition: opacity 1s;
+        -o-transition: opacity 1s;
+        transition: opacity 1s;
     }
-
-    .bg_list {
-        background: #000;
-        height: 130px;
-        width: 350px;
+    
+    .showing {
+        opacity: 1;
+        z-index: 2;
     }
-
-    .list a {
-        color: #000;
-        text-decoration: none;
+    
+    .slide {
+        font-size: 40px;
+        padding: 40px;
+        box-sizing: border-box;
+        background: #333;
+        color: #fff;
     }
-
+    
+    .slide:nth-of-type(1) {
+        background: red;
+    }
+    
+    .slide:nth-of-type(2) {
+        background: orange;
+    }
+    
+    .slide:nth-of-type(3) {
+        background: green;
+    }
+    
+    .slide:nth-of-type(4) {
+        background: blue;
+    }
+    
+    .slide:nth-of-type(5) {
+        background: purple;
+    }
     /*form*/
-
+    
     .form {
         width: 40vw;
         display: flex;
@@ -242,7 +275,7 @@
         justify-content: center;
         margin: 0 auto;
     }
-
+    
     .form input {
         width: 500px;
         height: 50px;
@@ -250,7 +283,7 @@
         border: 1px solid #000;
         padding: 5px 0;
     }
-
+    
     .form textarea {
         height: 150px;
         width: 500px;
@@ -258,7 +291,7 @@
         border: 1px solid #000;
         padding: 5px 0 5px 5px;
     }
-
+    
     .btn {
         width: 500px;
         height: 30px;
@@ -270,8 +303,8 @@
         text-transform: uppercase;
         font-size: 15px;
     }
-
     /* footer*/
+    
     .footer {
         padding-top: 100px;
         background-color: #000;
@@ -279,4 +312,3 @@
         color: #fff;
         height: 30vh;
     }
- 
